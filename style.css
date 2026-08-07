@@ -1,0 +1,97 @@
+:root {
+  font-family: Tahoma, "Segoe UI", sans-serif;
+  color: #f5f5f5;
+  background: #151515;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #151515;
+}
+
+.app-shell {
+  width: min(960px, 100%);
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+button,
+.file-button {
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 9px 13px;
+  background: #2a2a2a;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover,
+.file-button:hover { background: #373737; }
+
+.file-button input { display: none; }
+
+.reference-panel {
+  min-height: 220px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  background: #1f1f1f;
+  padding: 20px;
+}
+
+.reference-text {
+  font-size: 1.7rem;
+  line-height: 1.9;
+  text-align: right;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.pending { color: #fff; }
+.correct { color: #42d66b; }
+.incorrect { color: #ff5a67; text-decoration: underline; }
+
+.typing-label {
+  display: block;
+  margin: 16px 0 8px;
+  font-weight: 600;
+}
+
+#typingArea {
+  width: 100%;
+  min-height: 190px;
+  resize: vertical;
+  border: 2px solid #555;
+  border-radius: 10px;
+  padding: 14px;
+  font: 1.25rem/1.7 Tahoma, "Segoe UI", sans-serif;
+  text-align: right;
+  background: #fff;
+  color: #111;
+}
+
+#typingArea.match { background: #bfffc8; }
+#typingArea.no-match { background: #ffd0d0; }
+
+.status {
+  min-height: 1.5em;
+  text-align: center;
+  color: #ddd;
+}
+
+@media (max-width: 600px) {
+  .app-shell { padding: 10px; }
+  .reference-text { font-size: 1.3rem; }
+  #typingArea { min-height: 160px; font-size: 1.1rem; }
+  .toolbar > * { flex: 1 1 calc(50% - 10px); text-align: center; }
+}

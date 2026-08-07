@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Persian Typing Practice</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="toolbar">
+      <button id="newPassage" type="button">New Passage</button>
+      <button id="checkText" type="button">Check</button>
+      <button id="clearColors" type="button">Clear Colors</button>
+      <button id="resetTyping" type="button">Reset</button>
+      <label class="file-button">
+        Load Text File
+        <input id="fileInput" type="file" accept=".txt,text/plain" />
+      </label>
+    </header>
+
+    <section class="reference-panel" aria-label="Reference passage">
+      <div id="referenceText" class="reference-text" dir="rtl">Loading passage…</div>
+    </section>
+
+    <label for="typingArea" class="typing-label">Type the passage here:</label>
+    <textarea id="typingArea" dir="rtl" spellcheck="false" autocomplete="off"></textarea>
+
+    <p id="status" class="status" aria-live="polite">Loading…</p>
+  </main>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
