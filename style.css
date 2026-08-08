@@ -12,6 +12,22 @@ body {
   background: #151515;
 }
 
+head {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #202020;
+  border-bottom: 1px solid #444;
+  padding: 14px 18px;
+}
+
+head title1,
+head title  {
+  margin: 0;
+  text-align: center;
+}
+
 .app-shell {
   width: min(960px, 100%);
   margin: 0 auto;
@@ -94,6 +110,7 @@ button:hover,
 }
 
 @media (max-width: 600px) {
+   head { padding: 10px; }
   .app-shell { padding: 10px; }
   .reference-panel {min-height:180px}
   .reference-text { font-size: 1.3rem; }
