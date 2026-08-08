@@ -3,21 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Persian Typing Practice</title>
+  <title>Persian Script Practice</title>
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
   <main class="app-shell">
-    <header class="toolbar">
-      <button id="newPassage" type="button">New Passage</button>
-      <button id="checkText" type="button">Check</button>
-      <button id="clearColors" type="button">Clear Colors</button>
-      <button id="resetTyping" type="button">Reset</button>
-      <label class="file-button">
-        Load Text File
-        <input id="fileInput" type="file" accept=".txt,text/plain" />
-      </label>
-    </header>
+    
 
     <section class="reference-panel" aria-label="Reference passage">
       <div id="referenceText" class="reference-text" dir="rtl">Loading passage…</div>
@@ -26,11 +17,15 @@
     <label for="typingArea" class="typing-label">Type the passage here:</label>
     <textarea id="typingArea" dir="rtl" spellcheck="false" autocomplete="off"></textarea>
    
-    <div class="controls">
-      <button id="newPassage">New Passage</button>
-      <button id="check">Check</button>
-      <button id="reset">Reset</button>
-      <button id="clearColors">Clear Colors</button>
+    <div class="toolbar">
+      <button id="newPassage" type="button">New Passage</button>
+      <button id="checkText" type="button">Check</button>
+      <button id="clearColors" type="button">Clear Colors</button>
+      <button id="resetTyping" type="button">Reset</button>
+      <label class="file-button">
+        Load Text File
+        <input id="fileInput" type="file" accept=".txt,text/plain" />
+      </label>
     </div>
    
     <p id="status" class="status" aria-live="polite">Loading…</p>
