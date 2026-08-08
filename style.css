@@ -86,6 +86,10 @@ head title  {
   margin-bottom: 14px;
 }
 
+#loadText {
+  display: none;
+}
+
 button,
 .file-button {
   border: 1px solid #555;
@@ -95,7 +99,6 @@ button,
   color: #fff;
   font: inherit;
   cursor: pointer;
-  display: none;
 }
 
 button:hover,
